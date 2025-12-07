@@ -228,6 +228,14 @@ with col7:
 with col8:
     btn8 = st.button("❓ Ask Question", use_container_width=True)
 
+# Emergency First-Aid Resources
+st.markdown("""
+<div style="background:#ecfdf5;border-left:4px solid #10b981;padding:8px 12px;border-radius:0 8px 8px 0;margin:8px 0;">
+🆘 <b>Emergency First-Aid Kit:</b> <a href="https://t.me/NCINC_BOT" target="_blank" style="color:#059669;">@NCINC_BOT on Telegram</a> | 
+📞 Emergency: <b>112</b>
+</div>
+""", unsafe_allow_html=True)
+
 # Handle quick action buttons
 action_query = None
 if btn1:
@@ -241,7 +249,7 @@ elif btn4:
 elif btn5:
     action_query = "Help me set medicine reminders based on my prescriptions"
 elif btn6:
-    action_query = "Give me first-aid tips for my symptoms (general comfort measures only)"
+    action_query = "Give me first-aid tips for my symptoms. Also check out https://t.me/NCINC_BOT for First-Aid Kit resources."
 elif btn7:
     action_query = "Help me compare different doctor opinions"
 elif btn8:
