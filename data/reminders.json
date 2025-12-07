@@ -4,5 +4,17 @@
     "date": "2025-12-07",
     "time": "08:00",
     "repeat": "daily"
+  },
+  {
+    "title": "Monitor BP and Sugar",
+    "date": "2025-12-07",
+    "time": "09:00",
+    "repeat": "daily"
+  },
+  {
+    "title": "Monitor BP & sugar",
+    "date": "2025-12-07",
+    "time": "08:00",
+    "repeat": "daily"
   }
 ]

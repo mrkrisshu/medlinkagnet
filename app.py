@@ -208,25 +208,21 @@ st.header("💬 Chat with MedLink")
 
 # Quick Actions Grid
 st.markdown("**🎯 Quick Actions:**")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 with col1:
     btn1 = st.button("📋 Summarize Report", use_container_width=True)
 with col2:
     btn2 = st.button("💊 Check Medicines", use_container_width=True)
 with col3:
     btn3 = st.button("🏥 Find Doctor", use_container_width=True)
+
+col4, col5, col6 = st.columns(3)
 with col4:
     btn4 = st.button("📅 Health Timeline", use_container_width=True)
-
-col5, col6, col7, col8 = st.columns(4)
 with col5:
-    btn5 = st.button("⏰ Set Reminder", use_container_width=True)
+    btn5 = st.button("👨‍⚕️ Compare Doctors", use_container_width=True)
 with col6:
-    btn6 = st.button("🩹 First-Aid Tips", use_container_width=True)
-with col7:
-    btn7 = st.button("👨‍⚕️ Compare Doctors", use_container_width=True)
-with col8:
-    btn8 = st.button("❓ Ask Question", use_container_width=True)
+    btn6 = st.button("❓ Ask Question", use_container_width=True)
 
 # Emergency First-Aid Resources
 st.markdown("""
@@ -247,12 +243,8 @@ elif btn3:
 elif btn4:
     action_query = "Build a timeline of my health records and show any trends"
 elif btn5:
-    action_query = "Help me set medicine reminders based on my prescriptions"
-elif btn6:
-    action_query = "Give me first-aid tips for my symptoms. Also check out https://t.me/NCINC_BOT for First-Aid Kit resources."
-elif btn7:
     action_query = "Help me compare different doctor opinions"
-elif btn8:
+elif btn6:
     action_query = None  # Just focus on input
 
 st.markdown("---")
