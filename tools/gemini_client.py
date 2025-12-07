@@ -3,7 +3,12 @@ import os
 import requests
 import base64
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+# Try Streamlit secrets first (for cloud deployment), then env var
+try:
+    import streamlit as st
+    OPENROUTER_API_KEY = st.secrets.get("OPENROUTER_API_KEY", os.getenv("OPENROUTER_API_KEY", ""))
+except:
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 
 # Working models on OpenRouter (verified names)
 FREE_MODELS = [
